@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Team Workspaces</title>
+<style>
+.workspace-card { border:1px solid #ccc; padding:15px; margin:10px; border-radius:8px; }
+button { background:#2da44e; color:white; padding:8px 15px; border:none; border-radius:5px; }
+</style>
+</head>
+<body>
+<h1>My Team Workspaces</h1>
+<button onclick="createWorkspace()">+ Create New Workspace</button>
+
+<div id="workspaceList">
+  <div class="workspace-card">
+    <h3>FSD Lab Team</h3>
+    <p>Members: 4 | Project: Full Stack Development</p>
+    <button>Open Workspace</button>
+  </div>
+  <div class="workspace-card">
+    <h3>Design Team</h3>
+    <p>Members: 3 | Project: UI/UX Work</p>
+    <button>Open Workspace</button>
+  </div>
+</div>
+
+<script>
+function createWorkspace(){
+  let name = prompt("Enter Team Workspace Name:");
+  if(name){
+    alert("Workspace '" + name + "' created in branch: feature/team-workspaces");
+  }
+}
+</script>
+</body>
+</html>
