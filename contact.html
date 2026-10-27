@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact Us - Team Workspaces</title>
+<style>
+body { font-family: Arial; max-width: 600px; margin: 50px auto; }
+input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+button { background: #2da44e; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+</style>
+</head>
+<body>
+<h1>Contact Us</h1>
+<p>Team Workspaces - FSD Experiment 8</p>
+
+<form onsubmit="submitForm(event)">
+  <input type="text" id="name" placeholder="Your Name" required>
+  <input type="email" id="email" placeholder="Your Email" required>
+  <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+
+<p id="status"></p>
+
+<script>
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById("status").innerText = "Message sent successfully! - Team Workspaces";
+  document.getElementById("status").style.color = "green";
+}
+</script>
+</body>
+</html>
